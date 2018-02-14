@@ -1,5 +1,7 @@
 Title: Daring Fireball's Markdown Syntax
 Date: 2018-02-14 12:14
+Category: Cheatsheets
+Tags: markdown, cheatsheet
 Author: Daring Fireball 
 
 [Link to original article](https://daringfireball.net/projects/markdown/syntax.text)
