@@ -26,10 +26,10 @@ vivado_hls -f script.tcl
 Once in the interactive environment you can use the ‘help’ command to list all the commands available and drill down into more detailed help info on each individual command.
 
 Vivado HLS Help Output
-![Vivado HLS Help Output](https://i1.wp.com/benmarshall.co.uk/wp-content/uploads/2017/06/vivado_hls_help_screenshot.png?ssl=1)
+![Vivado HLS Help Output](/images/vivado_hls_help_screenshot.png)
 
 Vivado HLS cosim Help Output
-![Vivado HLS Cosim Output](https://i0.wp.com/benmarshall.co.uk/wp-content/uploads/2017/06/vivado_hls_cosim_help_screenshot.png?ssl=1)
+![Vivado HLS Cosim Output](/images/vivado_hls_cosim_help_screenshot.png)
 
 For most simple projects the interactive workflow would look very familiar:
 
