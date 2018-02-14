@@ -98,10 +98,10 @@ It’s important to note that the “vivado” executable is invoked. This is in
 ```
 Vivado’s invocation involves three flags that are undocumented:
 
-. The -notrace flag simply means that Vivado doesn’t print out the Tcl commands it executes, which it would otherwise do by default. I drop this flag in my own scripts: With all the mumbo-jumbo that is emitted anyhow, the Tcl commands are relatively informative.
-. The -m64 probably means “run in 64 bit mode”, but I have no idea.
-. The -messageDb seems to set the default message *.pb output, which is probably some kind of database from which the GUI takes its data to present in the Message tab. Note that the main Tcl script for impl_1 (e.g. top.tcl) involves several calls to create_msg_db followed by close_msg_db, which is probably how the implementation run has messages divided into subcategories. Just my guesses, since nothing of this is documented (not even these Tcl commands).
-. The ISEWrap.sh wrapper is crucially important if you want to be able to open the GUI after the implementation and work as if it was done in the GUI: It makes it possible for the GUI to tell which run has started, completed or failed. Namely, it creates two files, one when the run starts, and one when it ends.
+  . The -notrace flag simply means that Vivado doesn’t print out the Tcl commands it executes, which it would otherwise do by default. I drop this flag in my own scripts: With all the mumbo-jumbo that is emitted anyhow, the Tcl commands are relatively informative.
+  . The -m64 probably means “run in 64 bit mode”, but I have no idea.
+  . The -messageDb seems to set the default message *.pb output, which is probably some kind of database from which the GUI takes its data to present in the Message tab. Note that the main Tcl script for impl_1 (e.g. top.tcl) involves several calls to create_msg_db followed by close_msg_db, which is probably how the implementation run has messages divided into subcategories. Just my guesses, since nothing of this is documented (not even these Tcl commands).
+  . The ISEWrap.sh wrapper is crucially important if you want to be able to open the GUI after the implementation and work as if it was done in the GUI: It makes it possible for the GUI to tell which run has started, completed or failed. Namely, it creates two files, one when the run starts, and one when it ends.
 
 For example, during the invocation of a run, .vivado.begin.rst is created (note the “hidden file name” starting with a dot), and contains something like this:
 
