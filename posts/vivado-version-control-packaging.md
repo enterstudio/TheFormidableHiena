@@ -1,3 +1,7 @@
+Title: Vivado: Packaging for version control, distribution and repeatability
+Date: 2018-02-14 1:51
+Category: FPGA
+
 # Introduction
 
 It’s often desired to select a minimal kit of files from an FPGA project under development, which are just enough to build the programming file binary from. Possible uses for such a set are
