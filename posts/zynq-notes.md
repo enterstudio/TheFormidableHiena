@@ -11,7 +11,10 @@ This design example covers:
 *  Bare metal mass storage solution on Zynq-7000 AP SoC
 *  Demonstrating the Zynq-7000 AP SoC USB mass storage functionality with Windows as well as Linux host machine
   
-[Wiki Link](http://www.wiki.xilinx.com/Zynq-7000+AP+SoC+USB+Mass+Storage+Device+Class+Design+Example+Techtip)
+[USB Wiki Link](http://www.wiki.xilinx.com/Zynq-7000+AP+SoC+USB+Mass+Storage+Device+Class+Design+Example+Techtip)
 
+[USB Github Examples](https://github.com/Xilinx/embeddedsw/tree/master/XilinxProcessorIPLib/drivers/usbps/examples)
 
+[SD Card Wiki](http://www.wiki.xilinx.com/xilffs)
 
+[SD Card Github Examples](https://github.com/Xilinx/embeddedsw/blob/master/lib/sw_services/xilffs/examples/)
