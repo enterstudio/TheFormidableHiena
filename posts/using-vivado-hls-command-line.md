@@ -52,13 +52,13 @@ To explore these claims in a better way than just collecting anecdotal evidence 
 
 The test design used was a quickly knocked together floating point implementation of a sin function which uses a Taylor Series approximation. Xilinx offers a sin/cos function as part of the HLS math libraries but writing one out offered the chance to compare build performance at a couple of different stages of the design process. I used a basic stopwatch test to time the execution of the 3 build stages first using the GUI and then using a Tcl script to invoke the equivalent command. The stopwatch was started when I clicked the last button in the GUI before the process starts (which was the dialog box’s ok button for both C sim and cosim) or when I hit return after issuing the ‘vivado_hls -f script.tcl’ command. The stopwatch was stopped as soon as the final line of the process was printed. I gave each tool 3 runs of each build stage to generate an average. Raw data for the results can be seen here.
 
-|Partially Optimised Results	| Fully Optimised Results |
-|   |  Command Line (s)	| HLS GUI (s)	| Command Line (s)	| HLS GUI (s) |
+
+|  Phase |  Command Line (s)	| HLS GUI (s)	| Command Line (s)	| HLS GUI (s) |
 |-------------|------|-----|------|------|
 |C Simulation	| 2.65 | 4.50| 	2.52|	4.56 |
 |C Synthesis	| 7.51 | 11.59| 8.06|11.22 |
 |Cosimulation	|120.79|1305.41|114.92|116.37|
-HLS Execution Times
+| | Partially Optimized | | Completely Optimized | |
 
 It should be reasonably obvious that the general trend of these results backs up my claim of better raw tool performance from the command line interface. What’s really startling is the cosimulation results for the partially optimized design; a nearly 10x difference just by not using the GUI. This appears to be down to the level of output from the simulator and is something I’ve noticed time and time again working with HLS. If your HDL simulation, for whatever reason, outputs a lot of INFOs or WARNINGs (which is very common with generated code) then the HLS GUI seems to grind almost to a halt. In fact, whilst generating that particular group of results I had several full hangs of the cosimulation process. Anecdotal evidence would suggest that performing the same simulations using the Tcl interface has never shown this to cause the same issues, something it now looks like I can back up with an example.
 
