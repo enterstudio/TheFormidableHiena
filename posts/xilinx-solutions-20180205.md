@@ -1,7 +1,7 @@
 Title: Best solutions of the week of 2018-02-05
 Category: Xilinx
 Date: 2018-02-13 22:57
-Tags: xilinx, fpga, forum
+Tags: xilinx, fpga, forums
 
 # 2D Array of System Verilog Interfaces
 
