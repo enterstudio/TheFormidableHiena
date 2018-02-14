@@ -1,19 +1,27 @@
-Title: Vivado: Packaging for version control, distribution and repeatability
+Title: Vivado - Packaging for version control, distribution and repeatability
 Date: 2018-02-14 1:51
 Category: FPGA
 
 # Introduction
 
 It’s often desired to select a minimal kit of files from an FPGA project under development, which are just enough to build the programming file binary from. Possible uses for such a set are
+
 * Storing this set in a version control repository (possibly diff-comparing with previous versions)
+
 * Distribution of the package to peers and customers
+
 * Setting up a repeatable build process
+
 * Building the project on a remote computer
 
 This set of files should be
+
 * self-contained (can be used on a fresh computer)
+
 * relocatable (no absolute file paths)
+
 * with minimal redundancy (so a change in the project is observed in a single file)
+
 * based upon text files (preferred)
 
 Xilinx’ Vivado development system maintains a rather opaque set of files, reaching ~150 MB quite easily for a simple project. Its rather complex behavior as a tool, and the absence of a true file cleanup option require a method to create a compact set of files.
