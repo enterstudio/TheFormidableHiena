@@ -1,6 +1,7 @@
 Title: Vivado - Packaging for version control, distribution and repeatability
 Date: 2018-02-14 1:51
 Category: FPGA
+Tags: xilinx, fpga, vivado, tcl
 
 # Introduction
 
