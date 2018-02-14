@@ -52,4 +52,36 @@ Hopefully that's clear.  It's been on the list of things I wanted to ask Xilinx 
 Regards,
 Mark
 
-# 
+# PCIe IP not Exist 
+## Question
+I am using vivado 2017.1 and trying to use the IP-AXI Memory Mapped To PCI Express . But I couldn't find it in the library.
+Thanks,
+## Answer
+It will not show up in the IP catalog if your board does not have a PCI express connector.
+
+What I am not if it is a device compatibility issue or a filter based on the board data files.
+
+I assume that if it is compatibility, then it has to do with the 7 series integrated block (fig. 1) which is part of the AXI memory mapped to pci express component. See page 10 on PG 054.
+
+[PG054](https://www.xilinx.com/support/documentation/ip_documentation/pcie_7x/v3_0/pg054-7series-pcie.pdf)
+![7 Series Requirements](/images/7seriesrequirements.png)
+
+#  "There are no debug cores" in Zynq IP Integrator Design
+## Question
+I've got an IP Integrator/Block Diagram design targeting a Zynq XC7Z010, and I've been trying to put an ILA in it.  I have tried adding the ILA (both "normal' ILA and System ILA) as an IP block and connecting it up to some nets I want to look at; I have also tried opening the Synthesized Design and using Setup Debug.  If I do the latter, I can see the ILA and the Debug Hub being added to my design, and a probes file (.ltx) is generated.  But regardless of attempted method, when I program my device, I don't see any ILA core ... and a green bar appears at the top of the hardware manager window, saying "There are no debug cores."  The JTAG chain does come up just fine, such that I can see the processor, the FPGA, and the XADC inside the FPGA ... but no ILA.
+
+I am using Vivado 2017.3.  I checked via the schematic that both the Hub and the ILA are getting a clock (looks like they are running on the same output clock of the processor that everything else in my design uses).
+## Answer
+Seems there's a specific sequence you have to follow:
+
+  *Connect the hardware server and program the FPGA using Vivado. Don't program through SDK; that won't work.
+
+  *Start run/debug in SDK, and wait for the debugger to load up to the beginning of main()
+
+  *Refresh device in Vivado. Now the ILA core should be available.
+
+  *Set up triggers.
+
+  *Press the run button in SDK.
+
+
