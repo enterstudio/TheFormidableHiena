@@ -1,6 +1,6 @@
-Title: Zynq Notes
+Title: Zynq 7000 Notes
 Category: Xilinx
-Tags: zynq, vivado, fpga
+Tags: zynq, vivado, fpga, soc
 Date: 2018-02-14 15:31
 
 # Zynq-7000 AP SoC USB Mass Storage Device Class Design Example Techtip
