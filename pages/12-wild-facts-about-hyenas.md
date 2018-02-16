@@ -59,7 +59,7 @@ Hyenas are more than the carrion-eating villains of The Lion King. Though you ma
 
     Given their reputations as scavengers—and their creepy laughs—it makes sense that plenty of people don’t like hyenas. In Green Hills of Africa, Ernest Hemingway wrote:
 
-    Fisi, the hyena, hermaphroditic self-eating devourer of the dead, trailer of calving cows, ham-stringer, potential biter-off of your face at night while you slept, sad yowler, camp-follower, stinking, foul, with jaws that crack the bones the lion leaves, belly dragging, loping away on the brown plain …
+    > Fisi, the hyena, hermaphroditic self-eating devourer of the dead, trailer of calving cows, ham-stringer, potential biter-off of your face at night while you slept, sad yowler, camp-follower, stinking, foul, with jaws that crack the bones the lion leaves, belly dragging, loping away on the brown plain …
 
     Hemingway: 1, Hyenas: 0.
 	
