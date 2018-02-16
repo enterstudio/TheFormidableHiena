@@ -4,7 +4,7 @@ Category: Comics
 Tags: guns, 2A
 
 
-![Comic Strip](/images/when-the-prey-is-armed.jpg)
+![Comic Strip](/images/when-the-prey-is-armed.jpeg)
 
-![Comic Strip](/images/guns-dont-keep-us-safe.jpg)
+![Comic Strip](/images/guns-dont-keep-us-safe.jpeg)
 
