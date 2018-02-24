@@ -3,11 +3,11 @@ Date: 2018-02-16 12:49
 Category: Hyenas
 Tags: hyena, africa
 
-# 12 Wild Facts About Hyenas
-
-![Hyenas](/images/hyenas.jpg)
+Why is this blog named after hyenas? They are my favorite animal. They are badass, the real deal. 
 
 Hyenas are more than the carrion-eating villains of The Lion King. Though you may not ever fall in love with these cunning animals, it’s hard not to respect them.
+
+![Hyenas](/images/hyenas.jpg)
 
 ## 1. A HYENA’S LAUGH INDICATES SOCIAL STATUS.
 
