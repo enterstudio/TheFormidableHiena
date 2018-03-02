@@ -9,15 +9,15 @@ Follow these steps:
 
 ![Open XSDK outside Vivado](/images/Xilinx/open_sdk_alone.gif)
 
-2. Download the attached ZyboFiles.zip and extract it somewhere in your Downloads folder. There will be 3 files: fsbl.elf, BOOT.bin, design_1_wrapper.hdf
+2. You will need to be provided three files: fsbl.elf, BOOT.bin, design.hdf (names might be different)
 
-3. Drag the file design_1_wrapper.hdf into the SDK's Project Explorer. This will create a hardware project.
+3. Drag the hardware file (design.hdf in this example) into the SDK's Project Explorer. This will create a hardware project.
 
 4. From SDK's menu Xilinx, choose "Program Flash"
 
-5. Click on "Browse" for the Image file and select the BOOT.bin file you just unzipped
+5. Click on "Browse" for the Image file and select the BOOT.bin file
 
-6. Click on "Browse" for the FSBL file and choose the fsbl.elf file you just unzipped
+6. Click on "Browse" for the FSBL file and choose the fsbl.elf file 
 
 7. Make sure your board JTAG/USB is connected to your computer. 
 
