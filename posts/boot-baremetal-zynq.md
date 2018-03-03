@@ -5,8 +5,57 @@ Date: 2018-03-02 12:48
 
 # Boot image
 There are two possible variants how you can act:
-1) Go and try to make XAPP1079 alive by yourself.
-2) Read my boring digging in asm.
+1) Booting the 2nd CPU from the 1st CPU
+2) Do some boring stuff in asm
+
+## Booting the 2nd CPU from 1st
+
+Just add the partitions to the boot image in this sequence
+
+- FSBL (normal)
+
+- Bitfile (.bin)
+
+- ELF application CPU#0
+
+- ELF application CPU#1
+
+The FSBL will load both applications in memory, however it will only start CPU#1. You need to boot app on CPU#2 by yourself.
+
+This is the minimal code you need to make this happen. 
+```
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+#define CPU1APPADDR 0X2000000
+#define CPU1STARTADDR 0xfffffff0
+#define sev() __asm__("sev")
+
+int main()
+{
+    // Disable cache on OCM - this is NOT optional
+    Xil_SetTlbAttributes(0xFFFF0000,0x14de2);
+	
+    init_platform();
+    print("Hello World from CPU #0\n\r");
+
+    // Start CPU1
+    print("CPU0: writing startaddress for cpu1\n\r");
+    Xil_Out32(CPU1APPADDR, 0x2000000);
+    dmb(); //waits until write has finished
+    print("CPU0: sending the SEV to wake up CPU1\n\r");
+    sev();
+     
+    // application logic continues here
+
+    cleanup_platform();
+    return 0;
+}
+```
+
+I like this method because it is clean and fast.
 
 ## Boring 'asm' stuff
 To start both CPU some changes in files 'boot.S' and 'asm_vectors.S' were made.
