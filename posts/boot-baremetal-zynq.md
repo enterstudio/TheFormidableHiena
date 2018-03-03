@@ -5,14 +5,16 @@ Date: 2018-03-02 12:48
 
 # Boot image
 There are two possible variants how you can act:
+
 1) Booting the 2nd CPU from the 1st CPU
+
 2) Do some boring stuff in asm
 
 ## Booting the 2nd CPU from 1st
 
 Just add the partitions to the boot image in this sequence
 
-- FSBL (normal)
+- FSBL (no modifications)
 
 - Bitfile (.bin)
 
@@ -43,7 +45,7 @@ int main()
 
     // Start CPU1
     print("CPU0: writing startaddress for cpu1\n\r");
-    Xil_Out32(CPU1APPADDR, 0x2000000);
+    Xil_Out32(CPU1APPADDR, CPU1APPADDR );
     dmb(); //waits until write has finished
     print("CPU0: sending the SEV to wake up CPU1\n\r");
     sev();
