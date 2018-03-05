@@ -137,7 +137,7 @@ static const double d[] =
 #define LOW 0.02425
 #define HIGH 0.97575
 
-double pnorm(double p)
+double invnorm(double p)
 {
     double q, r;
 
