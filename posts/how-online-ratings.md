@@ -61,7 +61,7 @@ double wilson( double pos, double n, double confidence )
 }
 ```
 
-`invnorm` is the inverse normal CDF that can be efficiently computed with [Acklam's algorithm](/hot-to-compute-inverse-normal-cdf.html)
+`invnorm` is the inverse normal CDF that can be efficiently computed with [Acklam's algorithm](/how-to-compute-inverse-normal-cdf.html)
 
 ##OTHER APPLICATIONS
 
